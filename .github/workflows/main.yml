@@ -1,10 +1,11 @@
-name: Abiotic Factor Dedicated Server Wine+Ubuntu Build and Push Docker Image
+name: Abiotic Factor Build and Push Docker Image
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   build-and-push:
