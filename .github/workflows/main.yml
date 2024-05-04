@@ -23,5 +23,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build --no-cache --progress=plain -t ghcr.io/w4yfind3r/abiotic-factor:74416cf771fe45f3da11db19b0cabba30bbffa0b .
-        docker push ghcr.io/w4yfind3r/abiotic-factor:74416cf771fe45f3da11db19b0cabba30bbffa0b
+        docker build --no-cache --progress=plain -t ghcr.io/w4yfind3r/abiotic-factor:${{ github.sha }} -t ghcr.io/w4yfind3r/abiotic-factor:latest .
+        docker push ghcr.io/w4yfind3r/abiotic-factor:${{ github.sha }}
+        docker push ghcr.io/w4yfind3r/abiotic-factor:latest
